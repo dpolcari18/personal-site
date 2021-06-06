@@ -6,7 +6,7 @@ import './Home.css'
 // components
 import Greeting from '../components/Greeting'
 import About from '../components/About'
-import Skills from '../components/Skills'
+import Skills from './Skills'
 import Portfolio from '../components/Portfolio'
 import Blog from '../components/Blog'
 import Contact from '../components/Contact'
