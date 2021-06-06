@@ -1,5 +1,8 @@
 import React from 'react'
 
+// styling
+import './Home.css'
+
 // components
 import Greeting from '../components/Greeting'
 import About from '../components/About'
@@ -10,7 +13,7 @@ import Contact from '../components/Contact'
 
 const Home = () => {
     return (
-        <div>
+        <div id='home-div'>
             <Greeting />
             <About />
             <Skills />
