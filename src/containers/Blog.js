@@ -19,7 +19,7 @@ const Blog = () => {
         const fetchReq = await fetch(URL)
         const fetchRes = await fetchReq.json()
         
-        setBlogs(fetchRes.items.sort((a,b) => a.pubDate - b.pubDate).slice(0,4))
+        setBlogs(fetchRes.items.sort((a,b) => a.pubDate - b.pubDate).slice(0,6))
     }
 
     // call fetch function one time
@@ -28,8 +28,8 @@ const Blog = () => {
     }, [])
 
     return (
-        <div>
-            {blogs.map(blog => <BlogPost blog={blog} />)}
+        <div className='page-view horizontal'>
+            {blogs.map(blog => <BlogPost blog={blog} key={blog.pubDate} />)}
         </div>
     )
 }
