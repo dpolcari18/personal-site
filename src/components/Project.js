@@ -2,7 +2,7 @@ import React from 'react'
 
 const Project = ({ project }) => {
     return (
-        <div className='card'>
+        <div className='project-card'>
             <div className='card-header'>
                 <img src={project.image} alt={project.title} />
             </div>

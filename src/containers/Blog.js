@@ -28,7 +28,7 @@ const Blog = () => {
     }, [])
 
     return (
-        <div className='band'>
+        <div>
             {blogs.map(blog => <BlogPost blog={blog} />)}
         </div>
     )
