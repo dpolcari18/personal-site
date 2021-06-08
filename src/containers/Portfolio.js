@@ -42,7 +42,7 @@ const Portfolio = () => {
     }
 
     return(
-        <div className='portfolio-grid'>
+        <div className='container'>
             <Project project={projects.weDrive} />
             <Project project={projects.theStonkMarket} />
             <Project project={projects.flyBy} />
