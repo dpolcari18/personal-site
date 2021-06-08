@@ -10,7 +10,7 @@ const Project = ({ project }) => {
                 <h2>{project.title}</h2>
                 <p>{project.description}</p>
                 <div className='technology-div'>
-                    {project.technologies.map(tech => <span className='tag' key={tech}>{tech}</span>)}
+                    {project.technologies.map(tech => <span className='tag' key={tech} style={{background: `${project.background}`}}>{tech}</span>)}
                 </div>
             </div>
         </div>
