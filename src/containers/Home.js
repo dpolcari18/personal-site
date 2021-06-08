@@ -3,11 +3,13 @@ import React from 'react'
 // styling
 import './Home.css'
 
+// containers
+import Skills from './Skills'
+import Portfolio from './Portfolio'
+
 // components
 import Greeting from '../components/Greeting'
 import About from '../components/About'
-import Skills from './Skills'
-import Portfolio from '../components/Portfolio'
 import Blog from '../components/Blog'
 import Contact from '../components/Contact'
 

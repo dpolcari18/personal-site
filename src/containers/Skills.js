@@ -1,8 +1,5 @@
 import React from 'react'
 
-// components
-import Icon from '../components/Icon'
-
 // icons
 import { ReactComponent as Ruby } from '../icons/ruby.svg'
 import { ReactComponent as RubyOnRails } from '../icons/rubyonrails.svg'
