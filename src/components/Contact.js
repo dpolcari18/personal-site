@@ -2,7 +2,9 @@ import React from 'react'
 
 const Contact = () => {
     return(
-        'Contact'
+        <div className='page-view horizontal'>
+            Contact
+        </div>
     )
 }
 
