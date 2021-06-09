@@ -3,6 +3,13 @@ import React, { useState } from 'react'
 // styling
 import './Contact.css'
 
+// // environment vars
+// require('dotenv').config()
+
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
+const USER_ID = process.env.REACT_APP_USER_ID
+
 const Contact = () => {
 
     // local state 
@@ -14,6 +21,19 @@ const Contact = () => {
     // submit form
     const handleSubmit = (e) => {
         e.preventDefault()
+        
+        let data = {
+            service_id: SERVICE_ID,
+            template_id: TEMPLATE_ID,
+            user_id: USER_ID,
+            template_params: {
+                name: name,
+                email: email,
+                subject: subject,
+                body: body 
+            }
+        }
+        debugger
     }
 
     return(
@@ -53,7 +73,7 @@ const Contact = () => {
                               type='text'>                                  
                     </textarea>
                 </div>
-                <button type='text' className='submit'>Send</button>
+                <button type='submit' className='submit'>Send</button>
             </form>
         </div>
     )
