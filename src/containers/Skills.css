@@ -11,8 +11,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         height: 100vh;
-        margin: 35px 100px 35px 100px;
-        gap: 20px;
+        margin: 35px 120px 35px 120px;
+        gap: 40px;
     }
 }
 
