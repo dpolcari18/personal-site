@@ -28,7 +28,7 @@ const Blog = () => {
     }, [])
 
     return (
-        <div className='page-view horizontal'>
+        <div className='container'>
             {blogs.map(blog => <BlogPost blog={blog} key={blog.pubDate} />)}
         </div>
     )
