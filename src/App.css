@@ -2,3 +2,7 @@
   text-align: center;
   height: 100vh;
 }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
