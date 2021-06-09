@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
+import Portfolio from '../containers/Portfolio'
 
 // styling
 import './Contact.css'
 
-// // environment vars
-// require('dotenv').config()
-
+// ENV Vars
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
 const USER_ID = process.env.REACT_APP_USER_ID
+
+// endpoint
+const SEND_EMAIL = 'https://api.emailjs.com/api/v1.0/email/send'
 
 const Contact = () => {
 
@@ -17,6 +19,21 @@ const Contact = () => {
     const [email, setEmail] = useState('')
     const [subject, setSubject] = useState('')
     const [body, setBody] = useState('')
+
+
+    // send email
+    const sendEmail = async (emailObj) => {
+        const postReq = await fetch(SEND_EMAIL, emailObj)
+        const postRes = await postReq
+
+        console.log(postRes)
+
+        if (postRes.status === 200) {
+            console.log("SUCCESS")
+        } else if (postRes.status.includes(400)) {
+            console.log("FAILED")            
+        }
+    }
 
     // submit form
     const handleSubmit = (e) => {
@@ -33,7 +50,21 @@ const Contact = () => {
                 body: body 
             }
         }
-        debugger
+
+        let emailObj = {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            body: JSON.stringify(data)
+        }
+        
+        sendEmail(emailObj)
+
+        setName('')
+        setEmail('')
+        setSubject('')
+        setBody('')
     }
 
     return(
