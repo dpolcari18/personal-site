@@ -4,8 +4,10 @@
 }
 .page-view {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     flex-wrap: wrap;
+    margin: 20px 0 20px 0;
 }
 
 .vertical {
