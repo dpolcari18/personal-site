@@ -1,9 +1,3 @@
- @media only screen and (max-width: 799px) {
-     .contact-view {
-         /* margin-top: 70px; */
-     }
- }
-
  .contact-form {
     background-color: ##f7f8fc;
     border-radius: 20px;
