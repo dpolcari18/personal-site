@@ -7,8 +7,12 @@ const Project = ({ project }) => {
                 <img src={project.image} alt={project.title} />
             </div>
             <div className='card-body'>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
+                <div>
+                    <h2>{project.title}</h2>
+                </div>
+                <div>
+                    <p>{project.description}</p>
+                </div>
                 <div className='technology-div'>
                     {project.technologies.map(tech => <span className='tag' key={tech} style={{background: `${project.background}`}}>{tech}</span>)}
                 </div>

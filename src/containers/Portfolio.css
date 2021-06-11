@@ -40,10 +40,10 @@
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
-  min-height: 250px;
+  min-height: 350px;
 }
 
 .card-body p {
