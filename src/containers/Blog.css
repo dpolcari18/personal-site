@@ -82,7 +82,6 @@
   text-align: center;
   font-weight: 700;
   color: #181818;
-  text-shadow: 0px 2px 2px #a6f8d5;
   position: relative;
   margin: 0 0 10px 0;
 }
@@ -94,13 +93,12 @@
         text-align: center;
         font-weight: 700;
         color: #181818;
-        text-shadow: 0px 2px 2px #a6f8d5;
         position: relative;
         margin: 0 0 20px 0;
       }
 }
 
 .subtitle {
-  color: #b0215e;
+  color: #a09c9e;
   text-align: center;
 }
