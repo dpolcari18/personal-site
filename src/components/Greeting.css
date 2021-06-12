@@ -2,6 +2,10 @@
     margin: 30px 10px 30px 10px;
 }
 
+#greeting-div {
+  margin-top: 0px;
+}
+
 @media only screen and (min-width: 800px) {
     .page-view.vertical > h1 {
         margin: 25px 50px 25px 50px;
