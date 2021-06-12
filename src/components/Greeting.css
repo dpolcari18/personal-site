@@ -26,12 +26,12 @@
     
     /* Animation */
     .anim-typewriter{
-      animation: typewriter 4s steps(44) 1s 1 normal both,
-                 blinkTextCursor 700ms steps(44) 6 normal;
+      animation: typewriter 4s steps(44) 0.6s 1 normal both,
+                 blinkTextCursor 700ms steps(44) 5 normal;
     }
     
     .anim-typewriter-two{
-      animation: typewriter 4s steps(44) 4s 1 normal both,
+      animation: typewriter 4s steps(44) 3.6s 1 normal both,
                   blinkTextCursor 700ms steps(44) 4s 7 normal;
     }
     @keyframes typewriter{
