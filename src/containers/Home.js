@@ -7,6 +7,7 @@ import './Home.css'
 import Skills from './Skills'
 import Portfolio from './Portfolio'
 import Blog from './Blog'
+import Navbar from './Navbar'
 
 // components
 import Greeting from '../components/Greeting'
@@ -17,6 +18,7 @@ const Home = () => {
     return (
         <div id='home-div'>
             <Greeting />
+            <Navbar />
             <About />
             <Skills />
             <Portfolio />
