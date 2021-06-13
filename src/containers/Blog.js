@@ -28,7 +28,7 @@ const Blog = () => {
     }, [])
 
     return (
-        <div className='blog-container'>
+        <div className='blog-container' id='blog-div'>
             {blogs.map(blog => <BlogPost blog={blog} key={blog.pubDate} />)}
         </div>
     )

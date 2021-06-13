@@ -4,9 +4,9 @@
 }
 .page-view {
     display: flex;
+    flex-wrap: wrap;
     min-height: 100vh;
     height: fit-content;
-    flex-wrap: wrap;
     margin: 20px 0 20px 0;
 }
 
