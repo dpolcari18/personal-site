@@ -36,136 +36,215 @@
   
   /* Hamburger menu for mobile */
 
-
-  #menu-toggle {
-    display: block;
-    position: relative;
-    top: 50px;
-    left: 50px;
-    
-    z-index: 1;
-    
-    -webkit-user-select: none;
-    user-select: none;
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
   }
-
-#menu-toggle a {
-  text-decoration: none;
-  color: #232323;
   
-  transition: color 0.3s ease;
-}
-
-#menu-toggle a:hover {
-  color: tomato;
-}
-
-
-#menu-toggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
+  /* Button styling */
+  .menu-toggle {
+    display: inline-block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #333;
+  }
   
-  cursor: pointer;
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    color: #c00;
+  }
   
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  /*
+   Default styles + Mobile first
+   Offscreen menu style
+  */
+  .main-menu {
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+      overflow-y: scroll;
+      overflow-x: visible;
+      transition: left 0.3s ease,
+                        box-shadow 0.3s ease;
+      z-index: 999;
+  }
   
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menu-toggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
+  .main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 2.5em 0 0;
+    /* Hide shadow w/ -8px while 'closed' */
+    -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+       -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+            box-shadow: -8px 0 8px rgba(0,0,0,.5);
+    min-height: 100%;
+    width: 200px;
+    background: #1a1a1a;
+  }
   
-  background: #cdcdcd;
-  border-radius: 3px;
+  .main-menu a {
+    display: block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #383838;
+  }
   
-  z-index: 1;
+  .main-menu li:first-child a {
+    border-top: 1px solid #383838;
+  }
   
-  transform-origin: 4px 0px;
+  .main-menu a:hover,
+  .main-menu a:focus {
+    background: #333;
+    text-decoration: underline;
+  }
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menu-toggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-#menu-toggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menu-toggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menu-toggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menu-toggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
+  .main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
   
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
+  /*
+   On small devices, allow it to toggle...
+  */
+  /*
+   :target for non-JavaScript
+   [aria-expanded] will be used if/when JavaScript is added to improve interaction, though it's completely optional.
+  */
+  .main-menu:target,
+  .main-menu[aria-expanded="true"] {
+    display: block;
+    left: 0;
+    outline: none;
+    -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    box-shadow: 3px 0 12px rgba(0,0,0,.25);
+  }
   
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  .main-menu:target .menu-close,
+  .main-menu[aria-expanded="true"] .menu-close {
+    z-index: 1001;
+  }
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li {
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menu-toggle input:checked ~ ul {
-  transform: none;
-}
-
-nav {
-    display: flex
-}
+  .main-menu:target ul,
+  .main-menu[aria-expanded="true"] ul {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  /* 
+   We could us `.main-menu:target:after`, but
+   it wouldn't be clickable.
+  */
+  .main-menu:target + .backdrop,
+  .main-menu[aria-expanded="true"] + .backdrop{
+    position: absolute;
+    display: block;  
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: #000;
+    background: rgba(0,0,0,.85);
+    cursor: default;
+  }
+  
+  @supports (position: fixed) {
+    .main-menu,
+    .main-menu:target + .backdrop,
+    .main-menu[aria-expanded="true"] + .backdrop{
+      position: fixed;
+    }
+  }
+  
+  /*
+   Larger screen styling
+   Horizontal menu
+  */
+  @media (min-width: 768px) {
+    .menu-toggle,
+    .main-menu .menu-close {
+      display: none;
+    }
+    
+    /* Undo positioning of off-canvas menu */
+    .main-menu {
+      position: relative;
+          left: auto;
+          top: auto;
+          height: auto;
+      display: block;
+    }
+    
+    .main-menu ul {
+      display: flex;
+      
+      /* Undo off-canvas styling */
+      padding: 0;
+      -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+              box-shadow: none;
+      height: auto;
+      width: auto;
+      background: none;
+    }
+    
+    .main-menu a {
+      color: #06c;
+      border: 0 !important; /* Remove borders from off-canvas styling */
+    }
+    
+    .main-menu a:hover,
+    .main-menu a:focus {
+      background: none; /* Remove background from off-canvas styling */
+      color: #c00;
+    }
+  }
+  
+  /*
+   Demo purposes only
+  */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  header {
+    padding: 20px;
+    display: flex;
+    align-items: baseline;
+    background-color: white;
+    z-index: 9999;
+  }
+  
+  article {
+    padding: 30px;
+    width: 55em;
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+  
+  article h2 {
+    font-weight: 500;
+    font-size: 28px;
+  }
+  
+  .logo {
+    margin: 0 30px 0 10px;
+    font-size: 1.5em;
+  }
