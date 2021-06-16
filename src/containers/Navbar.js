@@ -103,22 +103,6 @@ const Navbar = () => {
                         tabindex="-1"
                         aria-hidden="true" hidden></a>
                 </header>
-                // <nav role='navigation'>
-                //     <div id='menu-toggle'>
-                //         <input type='checkbox'></input>
-                //         <span></span>
-                //         <span></span>
-                //         <span></span>
-                //         <ul id='menu'>
-                //             <a href='#home-div'>Home</a>
-                //             <a href='#about-div'>About</a>
-                //             <a href='#skills-div'>Skills</a>
-                //             <a href='#portfolio-div'>Portfolio</a>
-                //             <a href='#blog-div'>Blog</a>
-                //             <a href='#contact-div'>Contact</a>
-                //         </ul>
-                //     </div>
-                // </nav>
             )
         }
     }
