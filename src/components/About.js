@@ -8,8 +8,12 @@ import github from '../icons/github.png'
 import linkedin from '../icons/linkedin.png'
 import medium from '../icons/medium.png'
 
+// resume
+import resume from '../content/resume.pdf'
+
 // styling 
 import './About.css'
+import { nonEmptyArray } from 'check-types'
 
 const About = () => {
     return(
@@ -21,6 +25,9 @@ const About = () => {
                     <a href='https://github.com/dpolcari18' target='_blank' rel='noreferrer'><img src={github} className='icon-links'/></a>
                     <a href='https://www.linkedin.com/in/david-polcari/' target='_blank' rel='noreferrer'><img src={linkedin} className='icon-links'/></a>
                     <a href='https://davidpolcari.medium.com/' target='_blank' rel='noreferrer'><img src={medium} className='icon-links'/></a>
+                </div>
+                <div>
+                    <button className='submit' id='resume'><a href={resume} download='David Polcari Resume.pdf'>Click to Download my Resume</a></button>
                 </div>
             </div>
             <div>

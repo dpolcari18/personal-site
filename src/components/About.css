@@ -34,6 +34,16 @@
     margin: 20px 20px 20px 20px;
 }
 
-.page-view.horizontal h1 + p {
+.page-view.horizontal h1 + p, .page-view.horizontal p {
     font-size: 1.2em;
+}
+
+button a:link, button a:hover, button a:visited, button a:active {
+    text-decoration: none;
+    color: #eee;
+    background-color: #08d;
+}
+
+#resume {
+    margin: 15px 0 30px 0;
 }
