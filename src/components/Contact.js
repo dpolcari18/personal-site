@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Portfolio from '../containers/Portfolio'
 
 // styling
 import './Contact.css'
@@ -35,9 +34,17 @@ const Contact = () => {
         }
     }
 
+    const validateInputs = () => {
+        let inputs = [name, email, subject, body]
+        // if any are '' return error msg all fields are required
+        
+    }
+
     // submit form
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        validateInputs()
         
         let data = {
             service_id: SERVICE_ID,
@@ -73,36 +80,51 @@ const Contact = () => {
             <h3 className='contact-title'>Want to Know More?</h3>
             <h3 className='contact-subtitle'>Send me an Email!</h3>
                 <div className='input-container ic1'>
-                    <input placeholder='Name' 
+                    <input 
+                           id='name-input'
+                           placeholder='* Name' 
                            value={name} 
                            onChange={(e) => setName(e.target.value)} 
                            className='contact-input'
-                           type='text'>                    
+                           type='text'
+                           required>                    
                     </input>
                 </div>
                 <div className='input-container ic2'>
-                    <input placeholder='Email Address' 
+                    <input 
+                           id='email-input'
+                           placeholder='* Email Address' 
                            value={email} 
                            onChange={(e) => setEmail(e.target.value)} 
                            className='contact-input'
-                           type='text'>                    
+                           type='text'
+                           required>                    
                     </input>
                 </div>
                 <div className='input-container ic2'>
-                    <input placeholder='Subject' 
+                    <input 
+                           id='subject-input'
+                           placeholder='* Subject' 
                            value={subject} 
                            onChange={(e) => setSubject(e.target.value)}
                            className='contact-input'
-                           type='text'>                               
+                           type='text'
+                           required>                               
                     </input>
                 </div>
                 <div className='input-container ic3'>
-                    <textarea placeholder='What would you like to say..?' 
+                    <textarea 
+                              id='body-input'
+                              placeholder='* What would you like to say..?' 
                               value={body} 
                               onChange={(e) => setBody(e.target.value)}
                               className='contact-input'
-                              type='text'>                                  
+                              type='text'
+                              required>                                  
                     </textarea>
+                </div>
+                <div className='ic2'>
+                    * All fields are required
                 </div>
                 <button type='submit' className='submit'>Send</button>
             </form>
