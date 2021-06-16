@@ -34,9 +34,8 @@ const Contact = () => {
         }
     }
 
-    const validateInputs = () => {
-        let inputs = [name, email, subject, body]
-        // if any are '' return error msg all fields are required
+    const validateEmail = () => {
+        
         
     }
 
@@ -44,7 +43,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        validateInputs()
+        validateEmail()
         
         let data = {
             service_id: SERVICE_ID,
@@ -97,7 +96,7 @@ const Contact = () => {
                            value={email} 
                            onChange={(e) => setEmail(e.target.value)} 
                            className='contact-input'
-                           type='text'
+                           type='email'
                            required>                    
                     </input>
                 </div>
