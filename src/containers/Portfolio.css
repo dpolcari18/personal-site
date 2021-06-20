@@ -31,6 +31,12 @@
   height: 550px;
 }
 
+@media only screen and (min-width: 800px) {
+  .project-card:hover {
+    transform: scale(1.1);
+  }
+}
+
 .card-header img {
   width: 100%;
   height: 200px;
