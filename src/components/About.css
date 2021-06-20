@@ -46,4 +46,6 @@ button a:link, button a:hover, button a:visited, button a:active {
 
 #resume {
     margin: 15px 0 30px 0;
+    width: fit-content;
+    padding: 0 25px 0 25px;
 }

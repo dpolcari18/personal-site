@@ -26,7 +26,7 @@ const About = () => {
                     <a href='https://davidpolcari.medium.com/' target='_blank' rel='noreferrer'><img src={medium} className='icon-links' alt='Medium logo'/></a>
                 </div>
                 <div>
-                    <button className='submit' id='resume'><a href={resume} download='David Polcari Resume.pdf'><strong>Click to Download my Resume</strong></a></button>
+                    <button className='submit' id='resume'><a href={resume} target='_blank' rel='noreferrer'><strong>Resume</strong></a></button>
                 </div>
             </div>
             <div>
