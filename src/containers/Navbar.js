@@ -16,27 +16,21 @@ const Navbar = () => {
                 <div className='topnav sticky'>
                     <a href='#greeting-div'
                        name='greeting-div'
-                    //    className={active === 'greeting-div' ? 'active' : null}
                        >Home</a>
                     <a href='#about-div'
                        name='about-div'
-                    //    className={active === 'about-div' ? 'active' : null}
                        >About</a>
                     <a href='#skills-div'
                        name='skills-div'
-                    //    className={active === 'skills-div' ? 'active' : null}
                        >Skills</a>
                     <a href='#portfolio-div'
                        name='portfolio-div'
-                    //    className={active === 'portfolio-div' ? 'active' : null}
                        >Portfolio</a>
                     <a href='#blog-div'
                        name='blog-div'
-                    //    className={active === 'blog-div' ? 'active' : null}
                        >Blog</a>
                     <a href='#contact-div'
                        name='contact-div'
-                    //    className={active === 'contact-div' ? 'active' : null}
                        >Contact</a>
                 </div>
             )

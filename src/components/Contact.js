@@ -29,21 +29,14 @@ const Contact = () => {
 
         if (postRes.status === 200) {
             console.log("SUCCESS")
-        } else if (postRes.status.includes(400)) {
+        } else if (postRes.status === 400) {
             console.log("FAILED")            
         }
-    }
-
-    const validateEmail = () => {
-        
-        
     }
 
     // submit form
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        validateEmail()
         
         let data = {
             service_id: SERVICE_ID,
