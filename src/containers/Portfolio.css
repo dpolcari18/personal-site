@@ -19,6 +19,10 @@
     flex-wrap: wrap;
     margin: 20px 0 20px 0;
   }
+  
+  .project-card:hover {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  }
 }
 
 .project-card {
@@ -31,11 +35,8 @@
   height: 550px;
 }
 
-@media only screen and (min-width: 800px) {
-  .project-card:hover {
-    transform: scale(1.1);
-  }
-}
+
+
 
 .card-header img {
   width: 100%;

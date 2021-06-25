@@ -33,22 +33,27 @@
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
+
 @media only screen and (min-width: 800px) {
-    .blog-card {
-        height: 400px;
-        width: 400px;
-        position: relative;
-        padding: 20px;
-        box-sizing: border-box;
-        display: flex;
-        align-items: flex-end;
-        text-decoration: none;
-        margin: 10px 30px 10px 30px; 
-        border-radius: 25px;
-        background-size: cover;
-        background-position: center;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-      }
+  .blog-card {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    margin: 10px 30px 10px 30px; 
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .blog-card:hover {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  }
 }
 
 .inner {

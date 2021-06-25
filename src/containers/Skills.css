@@ -15,6 +15,10 @@
         margin: 20px 120px 20px 120px;
         gap: 40px;
     }
+    
+    .icon:hover {
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);    
+    }
 }
 
 .icon {
