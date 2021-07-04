@@ -22,15 +22,23 @@ const Contact = () => {
 
     // send email
     const sendEmail = async (emailObj) => {
-        const postReq = await fetch(SEND_EMAIL, emailObj)
-        const postRes = await postReq
-
-        console.log(postRes)
-
-        if (postRes.status === 200) {
-            console.log("SUCCESS")
-        } else if (postRes.status === 400) {
-            console.log("FAILED")            
+        try {
+            const postReq = await fetch(SEND_EMAIL, emailObj)
+            const postRes = await postReq
+            
+            if (postRes.status === 200) {
+                setName('')
+                setEmail('')
+                setSubject('')
+                setBody('')
+                throw 'Thank you for reaching out. I will be in touch shortly!'
+            } else if (postRes.status === 400) {
+                throw 'Something went wrong. Please try again.'     
+            }
+        } catch(e) {
+            let alertUser = document.getElementById('warning')
+            alertUser.innerHTML = e
+            setTimeout(() => alertUser.innerHTML='* All fields are required', 3000)
         }
     }
 
@@ -60,10 +68,6 @@ const Contact = () => {
         
         sendEmail(emailObj)
 
-        setName('')
-        setEmail('')
-        setSubject('')
-        setBody('')
     }
 
     return(
@@ -115,7 +119,7 @@ const Contact = () => {
                               required>                                  
                     </textarea>
                 </div>
-                <div className='ic2'>
+                <div className='ic2' id='warning'>
                     * All fields are required
                 </div>
                 <button type='submit' className='submit'>Send</button>
