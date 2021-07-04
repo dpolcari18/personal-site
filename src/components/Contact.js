@@ -20,22 +20,29 @@ const Contact = () => {
     const [body, setBody] = useState('')
 
 
-    // send email
+    // send email: emailObj: {headers: {}, method: '', body: '{}'}
     const sendEmail = async (emailObj) => {
+        
         try {
+            // attempt to send email to email.js server
             const postReq = await fetch(SEND_EMAIL, emailObj)
             const postRes = await postReq
             
+            // test response and throw different alert for user
             if (postRes.status === 200) {
+                // reset form if successful
                 setName('')
                 setEmail('')
                 setSubject('')
                 setBody('')
+                // alert message notifying user of success
                 throw 'Thank you for reaching out. I will be in touch shortly!'
             } else if (postRes.status === 400) {
+                // alert message notifying user of error
                 throw 'Something went wrong. Please try again.'     
             }
         } catch(e) {
+            // catch success of error message and put on DOM
             let alertUser = document.getElementById('warning')
             alertUser.innerHTML = e
             setTimeout(() => alertUser.innerHTML='* All fields are required', 3000)
