@@ -6,7 +6,7 @@
 #home > div[id] {
     padding-top: 60px;
     background: url('../images/background.png') no-repeat center center fixed;
-    background-size: fixed;
+    background-size: auto;
 }
 
 @media only screen and (min-width: 800px) {
