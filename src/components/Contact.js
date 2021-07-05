@@ -37,7 +37,7 @@ const Contact = () => {
                 setBody('')
                 // alert message notifying user of success
                 throw 'Thank you for reaching out. I will be in touch shortly!'
-            } else if (postRes.status === 400) {
+            } else {
                 // alert message notifying user of error
                 throw 'Something went wrong. Please try again.'     
             }
