@@ -43,10 +43,8 @@ const Navbar = () => {
                         aria-label="Open main menu">
                         <FontAwesomeIcon icon={faBars} />
                         <span class="sr-only">Open main menu</span>
-                        {/* <span class="fa fa-bars" aria-hidden="true"></span> */}
                     </a>
                     
-                    {/* <h1 class="logo">hamburgers</h1> */}
                     
                     <nav id="main-menu" class="main-menu" aria-label="Main menu">
                         <a href="#main-menu-toggle"

@@ -2,6 +2,10 @@
     margin: 30px 10px 30px 10px;
 }
 
+.page-view.vertical h2:first-child {
+    margin: 30px 10px 30px 10px;
+}
+
 #greeting-div {
   margin-top: 0px;
 }
@@ -10,44 +14,63 @@
   font-size: 3em;
 }
 
-@media only screen and (min-width: 800px) {
-    .page-view.vertical > h1 {
-        margin: 25px 50px 25px 50px;
-    }
-    
-    .line-1{
-        max-width: fit-content;
-        position: relative;
-        top: 50%;  
-        width: 24em;
-        margin: 0 auto;
-        border-right: 2px solid rgba(255,255,255,.75);
-        font-size: 180%;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        transform: translateY(-50%);    
-    }
-    
-    /* Animation */
-    .anim-typewriter{
-      animation: typewriter 4s steps(44) 0.6s 1 normal both,
-                 blinkTextCursor 700ms steps(44) 5 normal;
-    }
-    
-    .anim-typewriter-two{
-      animation: typewriter 4s steps(44) 2.7s 1 normal both,
-                  blinkTextCursor 700ms steps(44) 3.5s 7 normal;
-    }
-    @keyframes typewriter{
-      from{width: 0;}
-      to{width: 24em;}
-    }
-    @keyframes blinkTextCursor{
-      from{border-right-color: rgba(0, 0, 0, 1);}
-      to{border-right-color: transparent;}
-    }
-  }
+.page-view.vertical > h1 {
+    margin: 25px 50px 25px 50px;
+}
+
+.line-1{
+    max-width: fit-content;
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 0.6s 1 normal both,
+              blinkTextCursor 600ms steps(44) 4 normal;
+}
+
+.anim-typewriter-two{
+  animation: typewriter 4s steps(44) 2.8s 1 normal both,
+              blinkTextCursor 600ms steps(44) 2.8s 7 normal;
+}
+
+.anim-typewriter-three{
+  animation: typewriter 4s steps(44) 2.8s 1 normal both,
+              blinkTextCursor 500ms steps(44) 2.8s 3 normal;
+}
+
+.anim-typewriter-four{
+  animation: typewriter 4s steps(44) 4.1s 1 normal both,
+              blinkTextCursor 500ms steps(44) 4.1s 2 normal;
+}
+
+.anim-typewriter-five{
+  animation: typewriter 4s steps(44) 5.0s 1 normal both,
+              blinkTextCursor 500ms steps(44) 5.0s 3 normal;
+}
+
+.anim-typewriter-six{
+  animation: typewriter 4s steps(44) 6.1s 1 normal both,
+              blinkTextCursor 500ms steps(44) 6.1s 3 normal;
+}
+
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0, 0, 0, 1);}
+  to{border-right-color: transparent;}
+}
 
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
