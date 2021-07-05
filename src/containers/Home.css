@@ -4,11 +4,11 @@
 }
 
 #home > div[id] {
-    background: url('../images/mobile-background.png') no-repeat center center scroll; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url('../images/mobile-background.png') no-repeat center center fixed; 
+  -webkit-background-size: 600px 1000px;
+  -moz-background-size: 600px 1000px;
+  -o-background-size: 600px 1000px;
+  background-size: 600px 1000px;
 }
 
 @media only screen and (min-width: 800px) {
