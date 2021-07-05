@@ -19,7 +19,7 @@ import './Skills.css'
 
 const Skills = () => {
     return(
-        <div className='grid-container vertical' id='skills-div'>
+        <div className='grid-container vertical' id='my-skills'>
             <JavaScript className='icon' alt={'javascript logo'} title={'JavaScript'} fill={'#F7DF1E'} />
             <Ruby className='icon' alt={'ruby logo'} title={'Ruby'} fill={'#CC342D'}/>
             <Html className='icon' alt={'html5 logo'} title={'HTML'} fill={'#E34F26'} />

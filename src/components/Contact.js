@@ -78,7 +78,7 @@ const Contact = () => {
     }
 
     return(
-        <div className='page-view vertical' id='contact-div'>
+        <div className='page-view vertical' id='contact-me'>
             <form className='contact-form' onSubmit={(e) => handleSubmit(e)}>
             <h3 className='contact-title'>Want to Know More?</h3>
             <h3 className='contact-subtitle'>Send me an Email!</h3>

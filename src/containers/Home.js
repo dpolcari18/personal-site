@@ -16,7 +16,7 @@ import Contact from '../components/Contact'
 
 const Home = () => {
     return (
-        <div id='home-div'>
+        <div id='home'>
             <Greeting />
             <Navbar />
             <About />

@@ -14,23 +14,23 @@ const Navbar = () => {
         if (window.innerWidth >= 800) {
             return(
                 <div className='topnav sticky'>
-                    <a href='#greeting-div'
-                       name='greeting-div'
+                    <a href='#greetings'
+                       name='greetings'
                        >Home</a>
-                    <a href='#about-div'
-                       name='about-div'
+                    <a href='#about-me'
+                       name='about-me'
                        >About</a>
-                    <a href='#skills-div'
-                       name='skills-div'
+                    <a href='#my-skills'
+                       name='my-skills'
                        >Skills</a>
-                    <a href='#portfolio-div'
-                       name='portfolio-div'
+                    <a href='#portfolio-projects'
+                       name='portfolio-projects'
                        >Portfolio</a>
-                    <a href='#blog-div'
-                       name='blog-div'
+                    <a href='#blog-posts'
+                       name='blog-posts'
                        >Blog</a>
-                    <a href='#contact-div'
-                       name='contact-div'
+                    <a href='#contact-me'
+                       name='contact-me'
                        >Contact</a>
                 </div>
             )
@@ -55,12 +55,12 @@ const Navbar = () => {
                         <FontAwesomeIcon icon={faTimes} />
                         </a>
                         <ul>
-                        <li><a href="#greeting-div">Home</a></li>
-                        <li><a href="#about-div">About</a></li>
-                        <li><a href="#skills-div">Skills</a></li>
-                        <li><a href="#portfolio-div">Portfolio</a></li>
-                        <li><a href="#blog-div">Blog</a></li>
-                        <li><a href="#contact-div">Contact</a></li>
+                        <li><a href="#greetings">Home</a></li>
+                        <li><a href="#about-me">About</a></li>
+                        <li><a href="#my-skills">Skills</a></li>
+                        <li><a href="#portfolio-projects">Portfolio</a></li>
+                        <li><a href="#blog-posts">Blog</a></li>
+                        <li><a href="#contact-me">Contact</a></li>
                         </ul>
                     </nav>
                     <a href="#main-menu-toggle"

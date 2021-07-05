@@ -29,7 +29,7 @@ const Portfolio = () => {
             image: stonkMarketImg,
             technologies: ['JavaScript', 'Ruby on Rails', 'SQLite', 'Bootstrap'],
             background: '#49A7E6',
-            url: ''
+            url: 'https://youtu.be/RWDCteLRaik'
         },
         flyBy : {
             title: 'Fly-By',
@@ -50,7 +50,7 @@ const Portfolio = () => {
     }
 
     return(
-        <div className='container' id='portfolio-div'>
+        <div className='container' id='portfolio-projects'>
             <Project project={projects.weDrive} />
             <Project project={projects.theStonkMarket} />
             <Project project={projects.flyBy} />

@@ -6,11 +6,11 @@
     margin: 30px 10px 30px 10px;
 }
 
-#greeting-div {
+#greetings {
   margin-top: 0px;
 }
 
-#greeting-div h1 {
+#greetings h1 {
   font-size: 3em;
 }
 

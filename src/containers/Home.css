@@ -1,9 +1,9 @@
-#home-div {
+#home {
     display: flex;
     flex-direction: column;
 }
 
-#home-div > div[id] {
+#home > div[id] {
     padding-top: 60px;
 }
 
