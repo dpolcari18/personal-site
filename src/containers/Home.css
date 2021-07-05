@@ -5,7 +5,7 @@
 
 #home > div[id] {
     padding-top: 60px;
-    background: url('../images/background.png') center center cover no-repeat fixed;
+    background: url('../images/background.png') no-repeat center center cover fixed;
 }
 
 .page-view {
