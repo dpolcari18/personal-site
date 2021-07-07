@@ -15,7 +15,7 @@ const Greeting = () => {
                     <h1 className='line-1 anim-typewriter-two'>I'm a full-stack software engineer in Austin, TX.</h1>
                     <div className='divBox' id='more'>
                         <a href='#about-me'>
-                            <div>LEARN MORE ABOUT WHAT I DO</div>
+                            <div>SCROLL TO LEARN MORE</div>
                             <div><FontAwesomeIcon icon={faChevronDown}/></div>
                         </a>
                     </div>
@@ -31,7 +31,7 @@ const Greeting = () => {
                     <h2 className='line-1 anim-typewriter-six'>Austin, TX.</h2>
                     <div className='divBox' id='more'>
                         <a href='#about-me'>
-                            <div>LEARN MORE ABOUT WHAT I DO</div>
+                            <div>SCROLL TO LEARN MORE</div>
                             <div><FontAwesomeIcon icon={faChevronDown}/></div>
                         </a>
                     </div>

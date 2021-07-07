@@ -17,7 +17,7 @@ import Contact from '../components/Contact'
 const Home = () => {
     return (
         <div id='home'>
-            <div id='mobile-background'></div>
+            {/* <div id='mobile-background'></div> */}
             <Greeting />
             <Navbar />
             <About />
