@@ -57,16 +57,31 @@
   
   .contact-input {
     background-color: #fff;
-    border-radius: 12px;
-    border: 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-    color: #000;
-    font-size: 18px;
-    height: 100%;
-    outline: 0;
-    padding: 4px 20px 0;
-    width: 100%;
+      border-radius: 12px;
+      border: 1px solid black;
+      box-sizing: border-box;
+      color: #000;
+      font-size: 18px;
+      height: 100%;
+      outline: 0;
+      padding: 4px 20px 0;
+      width: 100%;
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .contact-input {
+      background-color: #fff;
+      border-radius: 12px;
+      border: 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+      box-sizing: border-box;
+      color: #000;
+      font-size: 18px;
+      height: 100%;
+      outline: 0;
+      padding: 4px 20px 0;
+      width: 100%;
+    }
   }
   
   .cut {

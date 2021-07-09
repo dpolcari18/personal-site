@@ -118,7 +118,7 @@ const Contact = () => {
                 <div className='input-container ic3'>
                     <textarea 
                               id='body-input'
-                              placeholder='* What would you like to say..?' 
+                              placeholder='* What would you like to say?' 
                               value={body} 
                               onChange={(e) => setBody(e.target.value)}
                               className='contact-input'
