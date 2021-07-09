@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-@media only screen and (max width: 799px) {
+@media only screen and (max-width: 799px) {
     #about-me {
         padding-top: 50px;
     }
