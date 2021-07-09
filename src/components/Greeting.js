@@ -24,7 +24,7 @@ const Greeting = () => {
         } else {
             return(
                 <div className='page-view vertical' id='greetings'>
-                    <div>
+                    <div id='mobile-headers'>
                         <h2 className='line-1 anim-typewriter'>Hi, I'm David!</h2>
                         <h2 className='line-1 anim-typewriter-three'>I'm a full-stack</h2>
                         <h2 className='line-1 anim-typewriter-four'>software</h2>

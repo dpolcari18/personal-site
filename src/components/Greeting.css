@@ -14,10 +14,22 @@
   font-size: 3em;
 }
 
+#mobile-headers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #more {
   position:absolute;
   bottom: 25px;
   animation: fadeIn 2s backwards 8.5s;
+}
+
+#more a {
+  text-decoration: none;
+  color: black
 }
 
 #more:hover {
@@ -29,10 +41,6 @@
   100% {opacity:1;}
 }
 
-#more a {
-  text-decoration: none;
-  color: black
-}
 
 .page-view.vertical > h1 {
     margin: 25px 50px 25px 50px;
