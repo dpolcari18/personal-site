@@ -3,6 +3,27 @@
     flex-direction: column;
 }
 
+@media only screen and (max width: 799px) {
+    #about-me {
+        padding-top: 50px;
+    }
+    #my-skills{
+        padding-top: 30px;
+    }
+    #portfolio-projects {
+        padding-top: 50px;
+    }
+    #blog-posts {
+        padding-top: 50px;
+    }
+    
+    #contact-me {
+        padding-bottom: 30px;
+        padding-top: 60px;
+    }
+}
+
+
 @media only screen and (min-width: 800px) {
     #home > div[id] {
         padding-top: 60px;
