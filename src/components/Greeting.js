@@ -24,11 +24,13 @@ const Greeting = () => {
         } else {
             return(
                 <div className='page-view vertical' id='greetings'>
-                    <h2 className='line-1 anim-typewriter'>Hi, I'm David!</h2>
-                    <h2 className='line-1 anim-typewriter-three'>I'm a full-stack</h2>
-                    <h2 className='line-1 anim-typewriter-four'>software</h2>
-                    <h2 className='line-1 anim-typewriter-five'>engineer in</h2>
-                    <h2 className='line-1 anim-typewriter-six'>Austin, TX.</h2>
+                    <div>
+                        <h2 className='line-1 anim-typewriter'>Hi, I'm David!</h2>
+                        <h2 className='line-1 anim-typewriter-three'>I'm a full-stack</h2>
+                        <h2 className='line-1 anim-typewriter-four'>software</h2>
+                        <h2 className='line-1 anim-typewriter-five'>engineer in</h2>
+                        <h2 className='line-1 anim-typewriter-six'>Austin, TX.</h2>
+                    </div>
                     <div className='divBox' id='more'>
                         <a href='#about-me'>
                             <div>SCROLL TO LEARN MORE</div>
